@@ -28,7 +28,7 @@ late numbering
 
   association _Booking { create ( features : instance ); with draft; }
 
-  //determination test on save { create; field AgencyID; }
+  determination test on save { create; field AgencyID; }
 
   mapping for zjs_travel control zjs_st_travel_intx
     {

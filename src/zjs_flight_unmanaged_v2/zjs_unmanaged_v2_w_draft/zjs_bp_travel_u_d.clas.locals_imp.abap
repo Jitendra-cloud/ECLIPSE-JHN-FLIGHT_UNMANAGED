@@ -40,6 +40,8 @@ FRIENDS ltcl_handler
 
     METHODS set_status_booked FOR MODIFY
       IMPORTING keys FOR ACTION travel~set_status_booked RESULT result.
+    METHODS test FOR DETERMINE ON SAVE
+      IMPORTING keys FOR travel~test.
 
     METHODS map_messages
       IMPORTING
@@ -562,6 +564,9 @@ CLASS lhc_travel IMPLEMENTATION.
       %cid = cid )
       TO reported.
     ENDLOOP.
+  ENDMETHOD.
+
+  METHOD test.
   ENDMETHOD.
 
 ENDCLASS.
